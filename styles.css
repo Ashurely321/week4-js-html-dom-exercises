@@ -1,0 +1,59 @@
+/* Base page styling */
+body {
+  font-family: Arial, sans-serif; /* Clean, readable font */
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 32px; /* Space around the page */
+  color: #333; /* Dark gray text for readability */
+}
+
+/* Page title */
+h1 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 32px; /* Space below the heading */
+}
+
+/* Form container */
+form {
+  max-width: 500px; /* Limit form width */
+  margin: 0 auto; /* Center the form horizontally */
+  background-color: #fff; /* White background for the form */
+  padding: 32px; /* Inner padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Labels for inputs */
+label {
+  display: block; /* Each label on its own line */
+  margin-top: 16px; /* Space above each label */
+  font-weight: bold; /* Make labels stand out */
+}
+
+/* Input fields and dropdown */
+input,
+select {
+  width: 100%; /* Full width inputs */
+  padding: 8px; /* Inner padding */
+  margin-top: 4px; /* Space between label and input */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 16px; /* Comfortable text size */
+}
+
+/* Button styling */
+button {
+  margin-top: 32px; /* Space above the button */
+  padding: 12px; /* Inner padding */
+  width: 100%; /* Full width button */
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Match input font size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
