@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get A New Furry Friend</title>
+  </head>
+  <body>
+    <h1>Pet Owner Sign-Up Form</h1>
+
+    <form id="signupForm">
+      <!-- Owner Info -->
+      <label for="ownerName">Owner Name:</label>
+      <input type="text" id="ownerName" /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" /><br />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" od="phone" /><br />
+
+      <label for="city">City:</label>
+      <input type="text" id="city" /><br />
+
+      <label for="zip">Zipcode:</label>
+      <input type="text" id="zip" pattern="\d{5}" maxlength="5" /><br />
+
+      <!-- Pet Info -->
+      <label for="petName">Pet's Name:</label>
+      <input type="text" id="petName" /><br />
+
+      <!-- Bonus: Pet Type -->
+      <label for="petType">Pet Type:</label>
+      <select id="petType">
+        <option value="">--Select--</option>
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+        <option value="Fish">Fish</option></select
+      ><br />
+
+      <!-- Button (not submit) -->
+      <button type="button" id="signUpButton">Sign Up</button>
+    </form>
+    <!-- Almost forgot JS link -->
+    <script src=".\script.js"></script>
+  </body>
+</html>
