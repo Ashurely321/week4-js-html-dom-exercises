@@ -1,9 +1,9 @@
 /* Base page styling */
 body {
-  font-family: Arial, sans-serif; /* Clean, readable font */
+  font-family: Arial, sans-serif; /* Basic font */
   background-color: #f9f9f9; /* Light background for contrast */
   padding: 32px; /* Space around the page */
-  color: #333; /* Dark gray text for readability */
+  color: #333; /* Dark gray text for readability, and I liked it */
 }
 
 /* Page title */
@@ -53,7 +53,16 @@ button {
   cursor: pointer; /* Pointer cursor on hover */
 }
 
-/* Button hover effect */
+/* Button hover effect: color + slight scale */
 button:hover {
-  background-color: #45a049; /* Slightly darker green on hover */
+  background-color: #45a049; /* Slightly darker green */
+  transform: scale(1.03); /* Grows to 103% size */
+  transition: transform 150ms ease-in-out; /* Smoooooooth animation */
+}
+
+/* Button active effect: slight shrink + darker shade */
+button:active {
+  transform: scale(0.98); /* Shrinks slightly when pressed */
+  background-color: #3e8e41; /* Even darker green for pressed state */
+  transition: transform 50ms ease-in-out; /* Quick snap effect */
 }
