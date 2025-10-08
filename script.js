@@ -15,6 +15,17 @@ function createPetOwner(data) {
         `Owner: ${this.name}, Pet: ${this.petName} (${this.petType}), Location: ${this.city}, ${this.zip}`
       );
     },
+
+    // Method: render
+    render: function () {
+      console.log("Rendering pet owner to DOM"); // proof of life
+
+      //Update DOM elements with pet owner data
+      document.getElementById("outputOwnerName").textContent = this.name;
+      document.getElementById("outputOwnerCity").textContent = this.city;
+      document.getElementById("outputPetName").textContent = this.petName;
+      document.getElementById("outputPetType").textContent = this.petType;
+    },
   };
 }
 
@@ -44,6 +55,13 @@ function saveForm() {
   const petType = document.getElementById("petType").value;
   console.log("Pet Type:", petType);
 
+  // Validate that all fields are filled
+  //If any field is empty, show an alert and stop the function
+  if (!name || !email || !phone || !city || !zip || !petName || !petType) {
+    alert("Please fill out all of the fields before submitting.");
+    return; // Exit early if form is incomplete
+  }
+
   // Proof of life 2: set a breakpoint here to inspect variables in DevTools
 
   // Populate the state object with captured values
@@ -63,6 +81,12 @@ function saveForm() {
 
   // Call the status method to log pet owner details
   petOwner.status();
+
+  // Call the render method to update the DOM
+  petOwner.render();
+
+  // Hide the form after successful submission
+  document.getElementById("signupForm").style.display = "none";
 }
 
 // Event listener setup: wait for DOM to load before binding button
