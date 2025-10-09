@@ -33,5 +33,18 @@ function createPet(name, age, species) {
         console.log(`${this.name} is too tired to play.`);
       }
     },
+
+    //Day 4, new method: generates the HTML for rendering this pet
+    html() {
+      return `
+    <div class="pet-card">
+    <h3>${this.name}</h3>
+    <p>Species: ${this.species}</p>
+    <p>Age: ${this.age}</p>
+    <p>Energy: ${this.energy}</p>
+    <p>Happiness: ${this.happiness}</p>
+    </div>
+    `;
+    },
   };
 }

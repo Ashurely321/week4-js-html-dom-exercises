@@ -9,6 +9,21 @@ const state = {
 // Create a test pet to verify shared function
 const testPet = createPet("Hello", 2, "Dog");
 testPet.status();
+console.log(testPet.html()); //Day4 : Proof of life: HTML output
+
+//Function to render all pets as HTML
+function renderPets() {
+  let htmlOutput = "";
+
+  for (const pet of state.pets) {
+    const petHTML = pet.html();
+    console.log("Pet HTML:", petHTML); //Day 4: proof of life
+    htmlOutput += petHTML;
+  }
+
+  console.log("All Pets HTML:", htmlOutput); //Proof of life
+  return htmlOutput;
+}
 
 //Event listener for form button
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,5 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
         Happiness: pet.happiness,
       }))
     );
+
+    //Day 4: Render pets to the page
+    const petsHTML = renderPets();
+    console.log("Render HTML:", petsHTML); //Proof of life
+
+    const container = document.getElementById("petsContainer");
+    container.innerHTML = petsHTML;
   });
 });
