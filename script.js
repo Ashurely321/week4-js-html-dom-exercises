@@ -1,10 +1,6 @@
 // Proof of life: script is connected
 console.log("hello world");
 
-// Global state object to hold form data
-const state = {};
-console.table(state); // Proof of life 1: empty state
-
 // Factory function to create a pet owner object
 function createPetOwner(data) {
   return {
@@ -54,6 +50,10 @@ function saveForm() {
 
   const petType = document.getElementById("petType").value;
   console.log("Pet Type:", petType);
+
+  localStorage.setItem("bane", state.name);
+  localStorage.setItem("email", state.email);
+  localStorage.setItem("zip", state.zip);
 
   // Validate that all fields are filled
   //If any field is empty, show an alert and stop the function
